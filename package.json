@@ -4,8 +4,11 @@
   "description": "Sample electron application",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "electron": "electron ."
   },
   "author": "Michael Joyce",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^15.3.0"
+  }
 }
