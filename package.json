@@ -9,6 +9,7 @@
   "author": "Michael Joyce",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^5.1.3",
     "electron": "^15.3.0"
   }
 }
