@@ -22,7 +22,9 @@ const menuTemplate = [
     {
         label: 'Edit',
         submenu: [
-            { label: 'Edit Todo' }
+            { label: 'Edit Todo' },
+            { role: 'copy' },
+            { role: 'paste' }
         ]
     }
 ];
@@ -32,12 +34,6 @@ if (process.platform === 'darwin') {
         label: app.name,
         submenu: [
           { role: 'about' },
-          { type: 'separator' },
-          { role: 'services' },
-          { type: 'separator' },
-          { role: 'hide' },
-          { role: 'hideOthers' },
-          { role: 'unhide' },
           { type: 'separator' },
           { role: 'quit' }
         ]
