@@ -28,5 +28,18 @@ const menuTemplate = [
 ];
 
 if (process.platform === 'darwin') {
-    menuTemplate.unshift({label: 'Fake'});
+    menuTemplate.unshift({
+        label: app.name,
+        submenu: [
+          { role: 'about' },
+          { type: 'separator' },
+          { role: 'services' },
+          { type: 'separator' },
+          { role: 'hide' },
+          { role: 'hideOthers' },
+          { role: 'unhide' },
+          { type: 'separator' },
+          { role: 'quit' }
+        ]
+    });
 }
