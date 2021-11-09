@@ -20,6 +20,8 @@ function createAddWindow() {
         title: 'Add New ToDo',
         parent: mainWindow
     });
+    addWindow.loadURL(`file://${__dirname}/add.html`);
+
 };
 
 const menuTemplate = [
