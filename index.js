@@ -1,12 +1,18 @@
 const electron = require('electron');
 
-const { app, BrowserWindow, Menu } = electron;
+
+const { app, BrowserWindow, Menu, ipcMain } = electron;
 
 let mainWindow;
 let addWindow;
 
 app.on('ready', () => {
-    mainWindow = new BrowserWindow({});
+    mainWindow = new BrowserWindow({
+        webPreferences: {
+            nodeIntegration: true,
+            contextIsolation: false
+        }
+    });
     mainWindow.loadURL(`file://${__dirname}/main.html`);
 
     const mainMenu = Menu.buildFromTemplate(menuTemplate);
@@ -15,6 +21,10 @@ app.on('ready', () => {
 
 function createAddWindow() {
     addWindow = new BrowserWindow({
+        webPreferences: {
+            nodeIntegration: true,
+            contextIsolation: false
+        },
         height: 200,
         width: 300,
         title: 'Add New ToDo',
