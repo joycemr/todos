@@ -34,6 +34,12 @@ function createAddWindow() {
 
 };
 
+ipcMain.on('todo:add', (event, todo) => {
+    debugger;
+    mainWindow.webContents.send('todo:add', todo);
+    addWindow.close();
+})
+
 const menuTemplate = [
     {
         label: 'File',
