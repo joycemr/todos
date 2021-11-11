@@ -76,6 +76,9 @@ if (process.env.NODE_ENV !== 'production') {
         label: 'Debug',
         submenu: [
             {
+                role: 'reload'
+            },
+            {
                 label: 'Toogle Developer Tools',
                 accelerator: process.platform === 'darwin' ? 'Command+Alt+I' : 'Ctrl+Shift+I',
                 click(item, focusedWindow) {
