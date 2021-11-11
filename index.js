@@ -31,7 +31,7 @@ function createAddWindow() {
         parent: mainWindow
     });
     addWindow.loadURL(`file://${__dirname}/add.html`);
-
+    addWindow.on('closed', () => addWindow = null);
 };
 
 ipcMain.on('todo:add', (event, todo) => {
